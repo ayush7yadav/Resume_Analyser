@@ -1,0 +1,220 @@
+/* CSS reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* CSS variables */
+:root{
+    --navbar-height: 59px;
+}
+
+
+/* Navigation bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* Navigation bar: LOGO and Image */
+#logo{
+    margin: 10px 28px;
+    border-radius: 10px;
+
+}
+
+
+#logo img{
+    height: 63px;
+    margin: 1px 2px;
+    filter: invert(100%);
+
+}
+
+#logo:hover{
+    
+    cursor: pointer;
+    
+}
+
+/*Navigation bar: list styling */
+
+#navbar ul{
+    display: flex;
+}
+
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 70%;
+}
+
+
+#navbar ul li{
+    
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    
+}
+/* HOME SECTION */
+#home{
+    font-family: 'Karla', sans-serif;
+    height: 333px;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    padding: 10px 20px;
+    margin: 2px;
+    position: absolute;
+    background: url('../bg3.jpg') no-repeat center center/cover;
+    height: 393px;
+    width: 100%;
+    top: -2px;
+    left: -16px;
+    z-index: -1;
+    opacity: 0.89;
+}
+/* COURSES SECTION */
+#courses{
+    margin: 34px;
+    display: flex;
+    
+}
+#courses .box{
+    border:none;
+    
+    margin: 3px 6px;
+    
+}
+#courses .box img{
+    height: 406px;
+    display: block;
+    margin: auto;
+    border-radius: 40px;  
+    
+}
+#courses .box img:hover{
+    cursor: pointer;
+
+}
+
+/* FOOTER */
+footer{
+    background: rgb(59, 59, 202);
+    color: white;
+    padding: 3px 12px;
+}
+
+
+/* UTILITY CLASS */
+.h-primary{
+    font-size: 2.5rem;
+    padding: 4px;
+    font-family: 'Karla', sans-serif;
+}
+.h-secondary{
+    font-size: 1.4rem;
+    padding: 4px;
+    font-family: 'Karla', sans-serif;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid whitesmoke;
+    background-color: rgb(48, 46, 46);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(52 38 147);
+}
+.center{
+    text-align: center;
+}
+/* COMMUNITY EXPERT SECTION */
+#expert-section{
+    height: 344px;
+}
+#expert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#expert img{
+    height: 175px;
+    display: block;
+    margin: 51px;
+    border-radius: 58%;
+}    
+#expert img:hover{
+    cursor: pointer;
+}
+/* CONTACT SECTION */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background: url(/bgcontact.jpg) no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px ;
+
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+
+}
